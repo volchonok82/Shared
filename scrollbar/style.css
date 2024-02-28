@@ -1,0 +1,40 @@
+*,
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  /* background-color: blue; */
+}
+.scroller {
+  /* background-color: red; */
+  max-height: 400px;
+  overflow: auto;
+
+  padding: 24px;
+
+  /* padding-right: calc(24px - 17px); */
+  /* scrollbar-gutter: auto; */
+  /* scrollbar-gutter: stable; */
+  scrollbar-gutter: stable both-edges;
+
+  /* ! теперь браузеры хром и на основе хромиум понимают scrollbar-width и scrollbar-color если нужна более гибкая стилизация использовать --web-kit префиксы, надо следить как будет дальше*/
+
+  scrollbar-width: thin;
+  scrollbar-color: pink orangered;
+}
+.scroller::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.scroller::-webkit-scrollbar-track {
+  background-color: pink;
+}
+.scroller::-webkit-scrollbar-thumb {
+  background-color: orange;
+  border: 2px solid orangered;
+  border-radius: 4px;
+}

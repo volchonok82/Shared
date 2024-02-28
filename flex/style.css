@@ -1,0 +1,13 @@
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  gap: 16px;
+}
+.item {
+  width: 100px;
+  background-color: pink;
+}

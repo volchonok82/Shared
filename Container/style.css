@@ -1,0 +1,55 @@
+*,
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: red;
+  --color-secondary: lime;
+  --color-dark: purple;
+}
+
+h1 {
+  width: max-content;
+  margin: 0 auto;
+}
+
+.super-simply-example {
+  /* padding-block: 20vh; */
+  display: grid;
+  gap: 1rem;
+}
+
+.super-simply-example > .container {
+  /* создание контейнера */
+  container-type: inline-size;
+  margin-inline: auto;
+  width: 100%;
+  padding: 2rem;
+  border: 4px solid gray;
+}
+.container[data-type="narrow"] {
+  max-width: 350px;
+}
+.container[data-type="medium"] {
+  max-width: 600px;
+}
+.container[data-type="wide"] {
+  max-width: 850px;
+}
+
+.super-simply-example p {
+  background-color: red;
+  padding: 0.5em;
+}
+
+@container (min-width: 375px) {
+  .super-simply-example p {
+    background-color: var(--color-secondary);
+  }
+}
+@container (min-width: 625px) {
+  .super-simply-example p {
+    background-color: var(--color-dark);
+  }
+}

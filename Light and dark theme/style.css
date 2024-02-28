@@ -1,0 +1,30 @@
+/* * для эмуляции темы в браузере в инструментах разработчика нажать ctrl+shift+p и набрать слово emulate, там появится запись prefers-color-sheme */
+
+:root{
+  --base: #cfcfcf;
+  --text: #212121;
+}
+@media (prefers-color-sheme: dark){
+  :root{
+    --base: #212121;
+    --text: #cfcfcf;
+  }
+}
+
+html{
+  color-scheme: dark light;
+}
+*,
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: min(600px, calc(100% - 2rem));
+  margin: 0 auto;
+  
+  h1{
+    margin-bottom: 0.3em;
+    text-align: center;
+  }
+}

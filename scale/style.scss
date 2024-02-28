@@ -1,0 +1,20 @@
+.wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+
+header {
+  border: 1px solid red;
+}
+.main {
+  background-color: pink;
+  overflow: auto;
+  position: relative;
+}
+
+.scale-content {
+  border: 1px solid blue;
+  scale: 100%;
+  transform-origin: center center;
+  //   transform-origin: top left;
+}

@@ -1,0 +1,52 @@
+:root {
+  --main-color: #333;
+  --main-color-rgb: 51, 51, 51;
+  color-scheme: light;
+}
+
+.dark {
+  --main-color: #fff;
+  --main-color-rgb: 255, 255, 255;
+  color-scheme: dark;
+}
+
+*,
+* {
+  /* margin: 0; */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--main-color);
+}
+
+.wrapper {
+  width: min(98vw, 900px);
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 3rem;
+}
+button {
+  margin-bottom: 3rem;
+}
+form {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+input[type="email"],
+textarea {
+  border: 1px solid gray;
+  border-radius: 4px;
+  width: min(50vw, 300px);
+  padding: 0.5em;
+  color: var(--main-color);
+}
+
+textarea {
+  resize: none;
+  min-height: 100px;
+}
