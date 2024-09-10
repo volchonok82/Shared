@@ -8,6 +8,8 @@
   );
 
   display: grid;
+  /* сетка с отступами по краям с отступом до основного контента и контентом по центру
+  можно растягивать блоки до границы экрана */
   grid-template-columns:
     [full-width-start] minmax(var(--padding-inline), 1fr)
     [breakout-start] minmax(0, var(--breakout-size))
