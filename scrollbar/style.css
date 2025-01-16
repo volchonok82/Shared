@@ -15,11 +15,14 @@
   overflow: auto;
 
   padding: 24px;
+  margin-bottom: 2rem;
 
   /* padding-right: calc(24px - 17px); */
   /* scrollbar-gutter: auto; */
   /* scrollbar-gutter: stable; */
   scrollbar-gutter: stable both-edges;
+
+  overscroll-behavior: contain; /* почитать!*/
 
   /* ! теперь браузеры хром и на основе хромиум понимают scrollbar-width и scrollbar-color если нужна более гибкая стилизация использовать --web-kit префиксы, надо следить как будет дальше*/
 
