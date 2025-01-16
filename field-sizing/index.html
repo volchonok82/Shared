@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Field-sizing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Field-sizing</h1>
+
+      <form action="">
+        <!-- теперь инпут может тянуться в зависимости от текста внутри -->
+        <input type="text" name="some-text" class="input-text" />
+
+        <br />
+
+        <!-- селект может сужаться или расширяться по выбранному значению -->
+        <select name="some-select">
+          <option value="1">some text</option>
+          <option value="2">medium long text medium long text</option>
+          <!-- но все равно длинные значения вылезают за границу экрана -->
+          <option value="3" style="width: 100px">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto
+            expedita accusantium quidem, quos itaque delectus, sequi fugiat
+            illum aliquid facilis cumque! Consequuntur unde vero suscipit, alias
+            eaque accusantium voluptatum!
+          </option>
+        </select>
+
+        <br />
+
+        <!-- texarea теперь может тянуться в зависимоти от текста внутри -->
+        <textarea name="some-textarea"></textarea>
+      </form>
+    </div>
+  </body>
+</html>
