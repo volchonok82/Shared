@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  /* Задать оутлайн и будет видно все выпирающие элементы */
+  outline: 2px solid lime;
+}
+
+.wrapper {
+  --wrapper-max-width: 926px;
+  --wrapper-padding: 4rem;
+
+  width: min(var(--wrapper-max-width), 100% - (var(--wrapper-padding) * 2));
+  margin-inline: auto;
+  border: 2px solid red;
+}
+.wrapper--xl {
+  --wrapper-max-width: 1400px;
+}
+
+.find-long-element__long-element {
+  display: block;
+  width: 2000px;
+}
