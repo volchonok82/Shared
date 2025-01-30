@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple markup</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrapper wrapper--xl">
+      <h1>Несколько небольших хитростей</h1>
+      <section class="find-long-element">
+        <h2>Найти то, что выпирает за края страницы</h2>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sint,
+            explicabo quis sapiente, aspernatur qui doloribus unde cum nihil
+            dolorem illum, praesentium ab cumque hic quos vel illo veritatis
+            quo.
+          </p>
+          <p class="find-long-element__long-element">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sint,
+            explicabo quis sapiente, aspernatur qui doloribus unde cum nihil
+            dolorem illum, praesentium ab cumque hic quos vel illo veritatis
+            quo.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sint,
+            explicabo quis sapiente, aspernatur qui doloribus unde cum nihil
+            dolorem illum, praesentium ab cumque hic quos vel illo veritatis
+            quo.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sint,
+            explicabo quis sapiente, aspernatur qui doloribus unde cum nihil
+            dolorem illum, praesentium ab cumque hic quos vel illo veritatis
+            quo.
+          </p>
+        </div>
+      </section>
+
+      <section class="inputmode">
+        <h2>Настройки числового ввода для инпута</h2>
+        <p>
+          Т.к. type=number не дает вводить буквы не во всех браузерах и проверка
+          еще идет с помощью JS или на беке, то лучше использовать type=text
+          inputmode=numeric так на мобильных устройствах будет удобнее всего
+          ввводить
+        </p>
+        <form action="">
+          <input type="text" inputmode="numeric" pattern="[0-9]+" />
+        </form>
+      </section>
+    </main>
+    <script></script>
+  </body>
+</html>
