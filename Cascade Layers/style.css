@@ -1,0 +1,137 @@
+/* небольшие настройки и сброс */
+/* ================================= */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
+html {
+  color-scheme: dark light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* включение прокрутки только если не откючена в предпочтениях */
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+  }
+}
+/* ============================== */
+:root {
+  --lime-0: rgb(149, 170, 149);
+  --lime-1: rgb(120, 190, 120);
+  --lime-2: rgb(55, 185, 55);
+  --gradient: linear-gradient(
+    90deg,
+    rgba(181, 218, 232, 1) 2%,
+    rgba(81, 154, 168, 1) 50%,
+    rgba(75, 110, 147, 1) 100%
+  );
+}
+
+/* ! стили в слоях это стили с нулевой специфичностью, их 
+  перебъет даже * в сбросе стилей, но все также работает
+  порядок записи и стили в слое который ниже будут специфичней
+  чем в слое выше и не важно какой длинный селектор тут
+  будет написан. Также важно как они объявлены в первый раз, 
+  т.к. можно что-то дописать потом и это все равно будет ниже
+  т.к. оюъявлено выше*/
+
+/* Поэтому можно сначала просто объявить эти слои в нужном 
+  порядке, а уже потом прописывать стили для них */
+@layer reset, base, layout, components, utilites;
+
+/* про !important если задать его какому-то свойству в первои 
+слое, то его уже будет невозможно перезаписать*/
+
+/* Создаем слой и даем ему имя*/
+@layer layout {
+  .primary-nav,
+  .section {
+    padding: 1rem;
+  }
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  .nav-list a {
+    color: var(--lime-0);
+  }
+  .nav-list a:hover,
+  .nav-list a:focus {
+    color: var(--lime-2);
+  }
+  .intro {
+    background: var(--gradient);
+  }
+}
+
+@layer components {
+  .button {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 0.125em;
+
+    background-color: var(--lime-0);
+    padding: 0.25em 1em;
+    color: gray;
+    font-weight: 700;
+  }
+}
+
+/* и вот самый простой селектор перебивает стили выше */
+/* a {
+  color: red;
+} */
+
+@layer base {
+  /* чтобы нормально заработало надо переместить в самый верх */
+  body {
+    margin: 0;
+    font-family: system-ui;
+    background-color: gray;
+  }
+  h1,
+  p {
+    margin-bottom: 0.5em;
+  }
+  a {
+    color: red;
+  }
+  .unstyled-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    inline-size: min(100% - 3rem, 60rem);
+    margin-inline: auto;
+  }
+}
+/* ============================== */
