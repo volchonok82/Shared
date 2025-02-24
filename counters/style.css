@@ -1,0 +1,77 @@
+/* небольшие настройки и сброс */
+/* ================================= */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* включение прокрутки только если не откючена в предпочтениях */
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+  }
+}
+/* ============================== */
+h1 {
+  margin-bottom: 1em;
+}
+section {
+  min-height: 100px;
+}
+
+/* создание счетчика */
+@layer counters {
+  body {
+    /* counter-reset сбрасывает существующий или создает новый счетчик */
+
+    counter-reset: section; /* задаем имя счетчика*/
+  }
+
+  /* увеличиваем счетчик на единицу */
+  section {
+    counter-increment: section;
+    position: relative;
+  }
+
+  /* для наглядности выведем его в after */
+  section::after {
+    content: "section: " counter(section);
+
+    /* просто стили для счечика */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2em;
+  }
+}
+
+/* ============================== */
