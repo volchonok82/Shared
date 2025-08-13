@@ -1,0 +1,136 @@
+.loading {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.animation-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.block {
+  position: absolute;
+  width: 32%;
+  height: 32%;
+  border-radius: 18.75%;
+  background-color: #023da2;
+}
+.block-top {
+  top: 18%;
+  left: 34%;
+  animation: top-block 1.2s infinite;
+}
+.block-right {
+  right: 18%;
+  top: 34%;
+  animation: right-block 1.2s infinite;
+}
+.block-bottom {
+  bottom: 18%;
+  left: 34%;
+  animation: bottom-block 1.2s infinite;
+}
+.block-left {
+  left: 18%;
+  top: 34%;
+  animation: left-block 1.2s infinite;
+}
+@keyframes top-block {
+  0% {
+    top: 18%;
+    transform: rotate(0deg);
+  }
+  30% {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  55% {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  85% {
+    top: 18%;
+    transform: rotate(180deg);
+  }
+  100% {
+    top: 18%;
+    transform: rotate(180deg);
+  }
+}
+@keyframes right-block {
+  0% {
+    right: 18%;
+    transform: rotate(0deg);
+  }
+  30% {
+    right: 0;
+    transform: rotate(90deg);
+  }
+  55% {
+    right: 0;
+    transform: rotate(90deg);
+  }
+  85% {
+    right: 18%;
+    transform: rotate(180deg);
+  }
+  100% {
+    right: 18%;
+    transform: rotate(180deg);
+  }
+}
+@keyframes bottom-block {
+  0% {
+    bottom: 18%;
+    transform: rotate(0deg);
+  }
+  30% {
+    bottom: 0;
+    transform: rotate(90deg);
+  }
+  55% {
+    bottom: 0;
+    transform: rotate(90deg);
+  }
+  85% {
+    bottom: 18%;
+    transform: rotate(180deg);
+  }
+  100% {
+    bottom: 18%;
+    transform: rotate(180deg);
+  }
+}
+@keyframes left-block {
+  0% {
+    left: 18%;
+    transform: rotate(0deg);
+  }
+  30% {
+    left: 0;
+    transform: rotate(90deg);
+  }
+  55% {
+    left: 0;
+    transform: rotate(90deg);
+  }
+  85% {
+    left: 18%;
+    transform: rotate(180deg);
+  }
+  100% {
+    left: 18%;
+    transform: rotate(180deg);
+  }
+}
+
+/* ------------- */
+svg {
+  border: 1px solid black;
+}
+.two {
+  width: 33px;
+  height: 33px;
+}
