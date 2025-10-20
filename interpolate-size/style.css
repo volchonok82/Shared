@@ -1,0 +1,61 @@
+/* небольшие настройки и сброс */
+/* ================================= */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* включение прокрутки только если не откючена в предпочтениях */
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+  }
+}
+/* ============================== */
+main {
+  padding: 2rem;
+}
+.block {
+  width: 600px;
+  height: 600px;
+  background-color: red;
+
+  /* позволяет анимировать высоту и ширину */
+  transition: height 0.3s;
+  interpolate-size: allow-keywords;
+
+  @media (max-width: 1300px) {
+    height: 300px;
+  }
+}
+
+/* ============================== */
