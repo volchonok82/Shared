@@ -43,10 +43,12 @@ video {
 /* ============================== */
 main {
   padding: 2rem;
+  display: grid;
+  gap: 40px;
 }
 .block {
-  width: 600px;
-  height: 600px;
+  width: 300px;
+  height: 300px;
   background-color: red;
 
   /* позволяет анимировать высоту и ширину */
@@ -54,7 +56,32 @@ main {
   interpolate-size: allow-keywords;
 
   @media (max-width: 1300px) {
-    height: 300px;
+    height: 100px;
+  }
+}
+
+.text {
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 18px;
+
+  /* если надо вывести несколько строк */
+  /* display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; */
+
+  /* страбатывает только на открытие */
+  interpolate-size: allow-keywords;
+  transition: height 0.3s;
+
+  &:hover {
+    background-color: antiquewhite;
+
+    overflow: clip;
+    white-space: normal;
+    height: max-content;
   }
 }
 
